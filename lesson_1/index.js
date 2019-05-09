@@ -28,3 +28,26 @@ function add(a) {
         return a + b;
     }
 }
+
+// Task 4
+function transformData(array) {
+    const obj = new Object();
+
+    for (var i = 0; i < array.length; i += 1) {
+        if (array[i].mark > 5) {
+            var key = array[i].login;
+            var value = array[i].firstName;
+
+            if (array[i].firstName == '' || array[i].lastName == '') {
+                value;
+            }
+            else {
+                value = array[i].firstName + ' ' + array[i].lastName;
+            }
+                
+            obj[key] = value;
+        }
+    }
+    
+    return obj;
+}
