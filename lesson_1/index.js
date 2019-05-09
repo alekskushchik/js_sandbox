@@ -14,7 +14,6 @@ function makeGreetings (userAge){
 }
 
 // Task 2
-var array = [];
 function splitArray (array, lengthOfSplit){
     var array2 = [];
 for(var i = 0; i < array.length; i += 1){
