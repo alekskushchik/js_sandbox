@@ -1,7 +1,5 @@
-// TASK 1
-
+// Task 1
 var userAge;
-
 function makeGreetings (userAge){
     var a = userAge%10; b = userAge%100;
 
@@ -16,14 +14,19 @@ function makeGreetings (userAge){
     }
 }
 
-// TASK 2
-function splitArray(arr, length){ 
-        var arr = [];
-        for (var i = 0; i < length; i += 1) {
-            arr.split(arr);
-        }
-        return arr;
+// Task 2
+var array = [];
+function splitArray (array, lengthOfSplit){
+    var array2 = [];
+for(var i = 0; i < array.length; i += 1){
+    array2.push(array.splice(i, lengthOfSplit, 2));
+}
+    return array2;
 }
 
-
-
+// Task 3
+function add(a) {
+    return function(b) {
+        return a + b;
+    }
+}
