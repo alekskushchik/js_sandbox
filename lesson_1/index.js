@@ -1,5 +1,4 @@
 // Task 1
-var userAge;
 function makeGreetings (userAge){
     var a = userAge%10, b = userAge%100;
 
