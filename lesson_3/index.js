@@ -8,19 +8,13 @@ class Human {
         console.log(`Hello, my name is ${this.name}, i am ${this.age} years old`);
     }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> acba8a8197de3d6af16957b9b53347af1c735f9f
 class AlevelStudent extends Human {
     constructor(name, age, marks) {
         super(name, age);
         this.marks = marks;
     }
-<<<<<<< HEAD
-=======
-    
->>>>>>> acba8a8197de3d6af16957b9b53347af1c735f9f
+
     averageMark() {
         let total = 0;
         for (let i = 0; i < this.marks.length; i++) {
@@ -34,6 +28,7 @@ class AlevelStudent extends Human {
 const student = new AlevelStudent('Ivan', 19, [5, 3, 5, 1, 4]);
 
 /******************* Task 2 ********************/
+
 class Calculator {
     constructor(result, num = 0) {
         this._result = result;
@@ -81,10 +76,10 @@ class Calculator {
         return this._result;
     }
 }
-<<<<<<< HEAD
 const calc = new Calculator();
 
 /******************* Task 4 ********************/
+
 class CalculatorExtended extends Calculator {
     constructor(num, storage = '') {
         super(num)
@@ -144,6 +139,4 @@ class CalculatorExtended extends Calculator {
     }
 }
 const calc2 = new CalculatorExtended();
-=======
-const calc = new Calculator();
->>>>>>> acba8a8197de3d6af16957b9b53347af1c735f9f
+
