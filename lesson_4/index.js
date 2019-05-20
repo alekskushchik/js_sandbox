@@ -88,4 +88,3 @@ function initBall(){
 
             this.removeEventListener('click', listener); 
     });
-}
