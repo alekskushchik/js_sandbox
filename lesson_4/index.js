@@ -16,3 +16,8 @@ function makeImages(...links) {
 }
 
 /******************* Task 2 ********************/
+class FormBuilder { 
+    constructor(form){
+        this.form = form;
+    }
+}
