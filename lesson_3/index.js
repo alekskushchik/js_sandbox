@@ -139,4 +139,3 @@ class CalculatorExtended extends Calculator {
     }
 }
 const calc2 = new CalculatorExtended();
-
