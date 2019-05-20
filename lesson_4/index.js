@@ -21,23 +21,22 @@ class FormBuilder {
         const form = document.createElement('form');
         this.form = form;
     }
+
     appendTo(target){
         target.append(this.form);
-
         return this;
     }
 
-    addInput(name){
+    addInput(name = ''){
         let input = document.createElement('input');
         input.type = 'text';
         input.name = 'name';
 
         this.form.appendChild(input);
-
         return this;
     }
 
-    addCheckbox(name){
+    addCheckbox(name = ''){
         let input = document.createElement('input');
         input.type = 'checkbox';
         input.name = 'name';
@@ -47,7 +46,7 @@ class FormBuilder {
         return this;
     }
 
-    addButton(name){
+    addButton(name = ''){
         let input = document.createElement('button');
         input.type = 'submit';
         input.value = 'name';
@@ -89,4 +88,3 @@ function initBall(){
 
             this.removeEventListener('click', listener); 
     });
-}
