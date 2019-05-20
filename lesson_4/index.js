@@ -17,7 +17,47 @@ function makeImages(...links) {
 
 /******************* Task 2 ********************/
 class FormBuilder { 
-    constructor(form){
+    constructor(){
+        const form = document.createElement('form');
         this.form = form;
+    }
+    appendTo(target){
+        target.append(this.form);
+
+        return this;
+    }
+
+    addInput(name){
+        let input = document.createElement('input');
+        input.type = 'text';
+        input.name = 'name';
+
+        this.form.appendChild(input);
+
+        return this;
+    }
+
+    addCheckbox(name){
+        let input = document.createElement('input');
+        input.type = 'checkbox';
+        input.name = 'name';
+
+        this.form.appendChild(input);
+
+        return this;
+    }
+
+    addButton(name){
+        let input = document.createElement('button');
+        input.type = 'submit';
+        input.value = 'name';
+
+        this.form.appendChild(input);
+
+        return this;
+    }
+
+    destroy(){
+        this.form.parentElement.removeChild(this.form);
     }
 }
