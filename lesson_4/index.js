@@ -21,23 +21,22 @@ class FormBuilder {
         const form = document.createElement('form');
         this.form = form;
     }
+
     appendTo(target){
         target.append(this.form);
-
         return this;
     }
 
-    addInput(name){
+    addInput(name = ''){
         let input = document.createElement('input');
         input.type = 'text';
         input.name = 'name';
 
         this.form.appendChild(input);
-
         return this;
     }
 
-    addCheckbox(name){
+    addCheckbox(name = ''){
         let input = document.createElement('input');
         input.type = 'checkbox';
         input.name = 'name';
@@ -47,7 +46,7 @@ class FormBuilder {
         return this;
     }
 
-    addButton(name){
+    addButton(name = ''){
         let input = document.createElement('button');
         input.type = 'submit';
         input.value = 'name';
@@ -60,4 +59,33 @@ class FormBuilder {
     destroy(){
         this.form.parentElement.removeChild(this.form);
     }
+}
+
+/******************* Task 3 ********************/
+function initBall(){
+    const divCircle = document.createElement('div');
+    document.body.prepend(divCircle);
+
+    divCircle.style.backgroundColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${(Math.random() * 256)})`;
+    divCircle.style.borderRadius = '50%';
+    divCircle.style.width = '25px';
+    divCircle.style.height = '25px';
+    divCircle.style.position = 'absolute';
+    divCircle.style.top = `${Math.random() * (window.innerHeight - 25)}px`;
+    divCircle.style.left = `${Math.random() * (window.innerWidth - 25)}px`;
+
+
+    divCircle.addEventListener('click', (event) => {
+        console.log('purple circle');
+        divCircle.style.top = `${Math.random() * (window.innerHeight - 50)}px`;
+        divCircle.style.left = `${Math.random() * (window.innerWidth - 50)}px`;
+        event.stopPropagation();
+    });
+
+        window.addEventListener('click', function listener (event){
+            const body = document.body;
+            body.removeChild(divCircle);
+
+            this.removeEventListener('click', listener); 
+    });
 }
