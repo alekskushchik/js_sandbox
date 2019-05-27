@@ -52,7 +52,7 @@ const add = (a) =>{
 
 /* Задача 3 */
 
-function mask(stringValue) {
+function mask(stringValue = '') {
     if (!stringValue) {
         return undefined;
     } else {
@@ -64,3 +64,10 @@ function mask(stringValue) {
         return stringValue;
     }
 };
+
+/* Задача 6 */
+
+function func6() {
+    const M = [];
+
+}
