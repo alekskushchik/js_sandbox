@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #generate{
+            display: block;
+            background: rgb(75, 126, 202);
+            margin: 50px auto;
+            font-size: 20px;
+            font-weight: 300;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 7px;
+        }
+        #popup{
+            position: relative;
+            display: none;
+            margin: 10px auto;
+            background-color: rgb(240, 240, 240);
+            width: 400px;
+            height: 150px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        #email{
+            margin-top: 40px;
+            padding: 10px;
+            width: 80%;
+            line-height: 22px;              
+            font-size: 20px;  
+            text-align: center;
+        }
+        #close{
+            position: absolute;
+            bottom: 10px;
+            right: 25px;
+            background: rgb(255, 0, 0);
+            width: 80px;
+            height: 35px;
+            text-align: center;
+            font-size: 16px;  
+            color: white;
+            border: 1px solid rgb(255, 0, 0);
+            border-radius: 10px;
+        }
+        .validate{
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            top: 170px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+        #validateEmail{
+            margin: 50px auto;
+            outline: none;
+            font-size: 16px;  
+            line-height: 22px; 
+            border: 1px solid grey;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+<input id="generate" type="button" value="Generate e-mail"></input>
+    
+    <div id="popup">
+        <input id="email" type="text" value="">
+        <button id="close">Close</button>
+    </div>
+<div class="validate">
+    <label for="validateEmail">Validate email</label>
+    <input id="validateEmail" type="text" value="">
+</div>
+    
+
+<script src="index.js"></script>
+</body>
+</html>
