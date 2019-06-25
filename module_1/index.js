@@ -28,7 +28,6 @@ function onSearch() {
   for (let i = 0; i < inputs.length; i += 1) {
       if (+inputs[i].value !== 0) {
           words.push({ word: inputs[i].id, value: +inputs[i].value });
-          // console.log(inputs[i].id);
       }
   }
 
@@ -49,7 +48,6 @@ function strangeSearch(words) {
       div.innerHTML = words[i];
       input.type = 'number';
       input.value = 0;
-      // input.setAttribute('id', words[i])
       input.id = words[i];
 
       document.body.appendChild(div);
