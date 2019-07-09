@@ -8,6 +8,7 @@ window.render = function render() {
         <div>
             <WrapInEmoji defaultEmoji="😀">Some Text</WrapInEmoji>
             <br/><hr/>
+            Countries list:
             <CountrySelect />
         </div>
     ), document.getElementById('root'));
