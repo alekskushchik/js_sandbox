@@ -1,16 +1,13 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
+import WrapInEmoji from './emoji';
 
-export class WrapInEmoji extends React.Component{
-    constructor(){
-        super();
+window.render = function render() {
+    ReactDOM.render((
+        <div>
+            <WrapInEmoji defaultEmoji="😀">Some Text</WrapInEmoji>
+        </div>
+    ), document.getElementById('root'));
+};
 
-    }
-    render() {
-        return(
-            <div
-            >
-                {props.symbol}
-            </div>
-        )
-    }
-}
+render();
