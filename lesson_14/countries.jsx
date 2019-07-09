@@ -41,11 +41,9 @@ export default class CountrySelect extends React.Component {
     }
     render() {
         return (
-            <div>
-                <ul>
-                    {this.loadList()}
-                </ul>
-            </div>
+            <ul style={{height: `${this.props.height}`}}>
+                {this.loadList()}
+            </ul>
         );
     }
 }
