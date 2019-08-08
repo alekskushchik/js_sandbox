@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            padding: 20px;
+            width: 400px;
+            background-color: lightblue;
+            text-align: center;
+            position: relative;
+            top: 100px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        div div {
+            padding: 0;
+        }
+        ol {
+            display: inline-block;
+            margin: 10px auto;
+            padding: 0;
+        }
+        li {
+            position: relative;
+            width: 240px;
+            text-align: left;
+        }
+        li:nth-child(2n) {
+            background-color: rgb(110, 212, 212);
+        }
+        li img {
+            position: absolute;
+            right: 0;
+            width: 20px;
+            cursor: pointer;
+        }
+        button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<script src="index.js"></script>
+</body>
+</html>
