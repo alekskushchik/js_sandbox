@@ -1,0 +1,127 @@
+body {
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    margin: 20px;
+    color: #ff0000;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+input[type=checkbox] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    margin: 10px 0 0 10px;
+}
+
+[type="checkbox"] + label {
+    position: relative;
+    padding: 0 75px 0 35px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+[type="checkbox"] + label:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #000000;
+    background: #fff;
+}
+
+[type="checkbox"] + label:after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 12px;
+    height: 12px;
+    background: #40a55e;
+    opacity: 0;
+    transition: .4s;
+}
+
+[type="checkbox"]:checked + label:after {
+    opacity: 1;
+}
+
+input:checked + label{
+    opacity: 0.5;
+    font-size: 16px;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    background: #025308;
+    border: 0;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-left: 5%;
+    margin-top: 20px;
+}
+
+button:hover{
+    background: #00fc17;
+}
+
+.delete {
+    color: black;
+    width: 50px;
+    height: 25px;
+    background: #ffffff;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+}
+
+.delete:hover{
+    box-shadow: 0 3px 3px lightcyan;
+    background: #80231A;
+    color: #FFFFFF;
+}
+
+input[type=text]{
+    width: 80%;
+    height: 40px;
+    border: 1px solid #545454;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    margin: 25px auto;
+    color: lightseagreen;
+}
+
+input[type=text]:focus {
+    background: aliceblue;
+    color: #000000;
+}
+
+#div1{
+    margin: 0 auto;
+    width: 75%;
+}
+
+.div_list{
+    border-bottom: 1px solid #838383;
+    margin: 20px 20px;
+    position: relative;
+}
