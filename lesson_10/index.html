@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Converter</title>
+    <style>
+        .currencyConverter {
+            display: inline-block;
+            margin: 20px 20px 0 20px;
+            text-align: center;
+        }
+        #arrow {
+            width: 30px;
+            margin-bottom: 10px;
+        }
+        #arrow:hover{
+            cursor: pointer;
+        }
+        .main {
+            text-align: center;
+            background-color: #c5ff14;
+            border: 2px solid #023007;
+            border-radius: 15px;
+            width: 600px;
+            margin: 0 auto;
+            padding-bottom: 20px;
+            font-size: 18px;
+            box-shadow: 3px 3px 3px 0 lightgray;
+        }
+        .head, #result {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 24px;
+        }
+        #result {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 30px;
+            color: darkblue;
+        }
+        #dateFrom, #dateTo {
+            font-size: 16px;
+            line-height: 26px;
+            width: 150px;
+        }
+        input {
+            font-size: 24px;
+            width: 140px;
+        }
+        select {
+            font-size: 20px;
+        }
+        #button {
+            margin: 20px;
+            width: 120px;
+            height: 50px;
+            font-size: 24px;
+        }
+        #list {
+            text-align: left;
+        }
+        .listDiv {
+            display: inline;
+            margin: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="head">Конвертер валют</div>          
+        <div class="currencyConverter">
+            <span>Отдаём</span>
+            <label for="selectFrom">
+                <select id="selectFrom">
+                    <option>USD</option>
+                    <option>EUR</option>
+                    <option>GBP</option>
+                </select>
+            </label>
+            <div>Сколько нужно обменять:</div>
+            <label for="from">
+                <input type="number" id="from" min="0">
+            </label>
+        </div>
+        <div class="currencyConverter">
+            <img id="arrow" src="./arrow.png" title="Поменять местами" alt="change_currencies">
+            <div>или</div>
+        </div>
+        <div class="currencyConverter">
+            <span>Получаем</span>
+            <label for="selectTo">
+                <select id="selectTo">
+                    <option>GBP</option>
+                    <option>EUR</option>
+                    <option>USD</option>
+                </select>
+            </label>
+            <div>Сколько нужно получить:</div>
+            <label for="to">
+                <input type="number" id="to" min="0">
+            </label>
+        </div>     
+        <div id="result"></div>
+        <div class="head">Курс за период</div>
+        <div class="currencyConverter">
+            <span>Курс</span>
+            <label for="periodCur1">
+                <select id="periodCur1">
+                    <option>EUR</option>
+                    <option>USD</option>
+                    <option>GBP</option>
+                </select>
+            </label>
+            <span>к</span>
+            <label for="periodCur2">
+                <select id="periodCur2">
+                    <option>USD</option>
+                    <option>EUR</option>
+                    <option>GBP</option>
+                </select>
+            </label>
+        </div> 
+        <div class="currencyConverter">
+            <span>Период с:</span>
+            <label for="dateFrom">
+                <input type="date" id="dateFrom" min="1999-01-01" value="2019-01-01">
+            </label>
+            <span>по:</span>
+            <label for="dateTo">
+                <input type="date" id="dateTo" min="1999-01-01" value="2019-01-10">
+            </label>
+            <button id="button">Показать</button>
+        </div>
+        <div id="list">
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
