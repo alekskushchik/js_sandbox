@@ -14,7 +14,7 @@
   "dependencies": {
     "email-validator": "^2.0.4",
     "format-validator": "^0.9.0",
-    "parcel": "^1.12.3",
+    "parcel": "^2.8.2",
     "random-email": "^1.0.3"
   },
   "devDependencies": {
